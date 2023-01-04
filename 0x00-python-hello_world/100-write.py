@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-from ctypes import *
-ugwu = CDLL("./libhellowrite.so")
-
-friday = ugwu.hello_write()
+import sys
+sys.stderr.write("and that piece of art is useful - Dora Korpar, 2015-10-19\n")
