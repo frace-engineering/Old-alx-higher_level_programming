@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    count = 1
+    count = 2
     for j in my_string:
         if my_string[j] == " ":
             count += 1
