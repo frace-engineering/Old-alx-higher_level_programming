@@ -2,5 +2,5 @@
 def delete_at(my_list=[], idx=0):
     for x in range(len(my_list)):
         for idx in x:
-            my_list[idx] = ''
-        return my_list
+            del my_list[x] 
+    return my_list
