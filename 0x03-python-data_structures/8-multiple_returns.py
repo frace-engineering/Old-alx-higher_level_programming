@@ -1,6 +1,6 @@
 def multiple_returns(sentence):
-    if sentence != '':
-        tuple_s = (len(sentence), sentence[0])
+    if sentence == '':
+        tuple_s = (len(sentence), None)
     else:
-        tuple_s = (0, None)
-    print(tuple(tuple_s))
+        tuple_s = (len(sentence), sentence[0])
+    return (tuple_s)
