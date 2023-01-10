@@ -1,6 +1,8 @@
 def multiple_returns(sentence):
-    if sentence is None:
-        sentence[0] = 'None'
-    else:
+    if sentence != '':
         tuple_s = (len(sentence), sentence[0])
-    return tuple_s
+    else:
+        tuple_s = (0, None)
+    print(tuple_s)
+sentence = 'School' 
+multiple_returns(sentence)
