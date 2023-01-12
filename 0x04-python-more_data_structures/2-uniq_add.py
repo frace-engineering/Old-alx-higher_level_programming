@@ -6,5 +6,4 @@ def uniq_add(my_list=[]):
             if my_list.count(x) == 1:
                 this_sum += x
         i++
-    this_sum += x
     return (this_sum)
