@@ -4,6 +4,7 @@ Square Class: Define a Square with private instance
 
 '''
 
+
 class square:
     ''' class square that defines a square '''
     def __init__(self, size=0):

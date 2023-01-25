@@ -5,6 +5,8 @@ Class Square: Defines a square
 
 """
 
+
 class square:
     """ Make an empty Square Class """
-    pass
+    def square(self):
+        pass
