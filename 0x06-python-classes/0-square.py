@@ -8,5 +8,4 @@ Class Square: Defines a square
 
 class square:
     """ Make an empty Square Class """
-    def square(self):
-        pass
+    pass
