@@ -7,6 +7,6 @@ Class Square: Defines a square
 
 
 class square:
-    pass
-
-p = square()
+    """ Define square """
+    def square(self):
+        pass
