@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Program that prints my name """
 
 
 def say_my_name(first_name, last_name=""):
