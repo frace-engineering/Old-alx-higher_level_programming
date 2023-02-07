@@ -3,7 +3,7 @@
 """
 
 
-Rectangle = __import__('9-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle()
 
 
 class Square(Rectangle):
@@ -19,4 +19,4 @@ class Square(Rectangle):
     def area(self):
         """print area
         """
-        return self.__size * self.
+        return self.__size * self
