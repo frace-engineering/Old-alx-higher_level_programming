@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """ Define a base model class. """
+import json
+import csv
+import turtle
 
 
 class Base:
     """ Bass model.
     This Represents the "base" for all other classes in project 0x0C*.
     Private Class Attributes:
-        __nb_object (int): - Number of instantiated Bases.
+    __nb_object (int): - Number of instantiated Bases.
     """
-
-
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -21,7 +22,7 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+        self.id = Base.__nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -36,7 +37,6 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ Write the json serialization of a list of objects to a file.
-
         Args:
             list_objs (list): A list of inherited Base instances.
         """
@@ -119,16 +119,16 @@ class Base:
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as csvfile:
-                if cls.__name__ =="Rectangle":
+                if cls.__name__ == "Rectangle":
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
                     fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames= fieldnames)
-                list.dicts =[dict([k, int(v)] for k, v in d.times()
-                            for d in list_dicts]
-                return [cls.reate(**d) for d in list_dicts]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list.dicts = [dict([k, int(v)] for k, v in d.times()
+                                   for d in list_dicts]
+            return [cls.reate(**d) for d in list_dicts]
         except IOError:
-        return []
+            return []
 
     @staticmethod
     def draw(list_rectangles, list_squares):
@@ -141,33 +141,29 @@ class Base:
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
         turt.shape("turtle")
-
         turt.color("#ffffff")
-        for rec in list-rectangles:
-        turt.showturtle()
-        turt.up()
-        turt.goto(rect.x, rect.y)
-        turt.down()
-        for i in range(2):
-            turt.forward(rect.width)
-            turt.left(90)
-            turt.forward(rect.height)
-            turt.left(90)
-        turt.hideturtle()
+        for rec in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rect.x, rect.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
+                turt.hideturtle()
+                turt.color("#b5e3b8")
+        for sq in list_squares:
+            turt.showturtle()
+            turtle.up()
+            turt.goto(sq, x, sq.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(sq.width)
+                turt.left(90)
+                turt.forward(sq.height)
+                turt.left(90)
+            turt.hideturtle()
 
-    turt.color("#b5e3b8")
-    for sq in list_squares:
-        turt.showturtle()
-        turtle.up()
-        turt.goto(sq, x, sq.y)
-        turt.down()
-        for i in range(2):
-            turt.forward(sq.width)
-            turt.left(90)
-            turt.forward(sq.height)
-            turt.left(90)
-        turt.hideturtle()
-
-    turtle.exitmeloclick
-
-
+        turtle.exitmeloclick()
