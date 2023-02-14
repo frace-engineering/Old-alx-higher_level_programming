@@ -3,7 +3,7 @@
 from model.base import base
 
 
-iclass Rectangle(Base):
+class Rectangle(Base):
     """ Class rectangle """
     def __init__(self, width, height, x=0, y=0, id=None):
         """ Initialize a new Rectangle.
